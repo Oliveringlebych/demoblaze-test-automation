@@ -24,9 +24,9 @@ public class DemoblazeDefinitions {
     @When("I have logged in")
     public void I_have_logged_in() throws Exception{
         driver.findElement(By.id("login2")).click();
-        driver.findElement(By.xpath("//*[@id=\"loginusername\"]")).sendKeys("oingleby123");
+        driver.findElement(By.id("loginusername")).sendKeys("oingleby123");
         Thread.sleep(500);
-        driver.findElement(By.xpath("//*[@id=\"loginpassword\"]")).sendKeys("oingleby123");
+        driver.findElement(By.id("loginpassword")).sendKeys("oingleby123");
         Thread.sleep(500);
         driver.findElement(By.xpath("//*[@id=\"logInModal\"]/div/div/div[3]/button[2]")).click();
         Thread.sleep(500);
@@ -59,17 +59,17 @@ public class DemoblazeDefinitions {
         Thread.sleep(500);
         driver.findElement(By.xpath("//*[@id=\"page-wrapper\"]/div/div[2]/button")).click();
         Thread.sleep(500);
-        driver.findElement(By.xpath("//*[@id=\"name\"]")).sendKeys("John Smith");
+        driver.findElement(By.id("name")).sendKeys("John Smith");
         Thread.sleep(500);
-        driver.findElement(By.xpath("//*[@id=\"country\"]")).sendKeys("Glamorgan");
+        driver.findElement(By.id("country")).sendKeys("Glamorgan");
         Thread.sleep(500);
-        driver.findElement(By.xpath("//*[@id=\"city\"]")).sendKeys("Cardiff");
+        driver.findElement(By.id("city")).sendKeys("Cardiff");
         Thread.sleep(500);
-        driver.findElement(By.xpath("//*[@id=\"card\"]")).sendKeys("4444333322221111");
+        driver.findElement(By.id("card")).sendKeys("4444333322221111");
         Thread.sleep(500);
-        driver.findElement(By.xpath("//*[@id=\"month\"]")).sendKeys("09");
+        driver.findElement(By.id("month")).sendKeys("09");
         Thread.sleep(500);
-        driver.findElement(By.xpath("//*[@id=\"year\"]")).sendKeys("25");
+        driver.findElement(By.id("year")).sendKeys("25");
         Thread.sleep(500);
         driver.findElement(By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[2]")).click();
         Thread.sleep(500);
@@ -80,7 +80,7 @@ public class DemoblazeDefinitions {
     @Then("I delete that item from the basket")
     public void I_delete_that_item_from_the_basket() throws Exception {
         driver.findElement(By.xpath("//*[@id=\"cartur\"]")).click();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         driver.findElement(By.xpath(" /html/body/div[6]/div/div[1]/div/table/tbody/tr/td[4]/a")).click();
         Thread.sleep(1500);
         driver.quit();
@@ -91,11 +91,11 @@ public class DemoblazeDefinitions {
     public void I_can_use_the_contact_us_link_to_send_a_message() throws Exception {
         driver.findElement(By.xpath("//*[@id=\"navbarExample\"]/ul/li[2]/a")).click();
         Thread.sleep(500);
-        driver.findElement(By.xpath("//*[@id=\"recipient-email\"]")).sendKeys("oingleby123@email.co.uk");
+        driver.findElement(By.id("recipient-email")).sendKeys("oingleby123@email.co.uk");
         Thread.sleep(500);
-        driver.findElement(By.xpath("//*[@id=\"recipient-name\"]")).sendKeys("Oliver Ingleby");
+        driver.findElement(By.id("recipient-name")).sendKeys("Oliver Ingleby");
         Thread.sleep(500);
-        driver.findElement(By.xpath("//*[@id=\"message-text\"]")).sendKeys("Hello World");
+        driver.findElement(By.id("message-text")).sendKeys("Hello World");
         Thread.sleep(500);
         driver.findElement(By.xpath("//*[@id=\"exampleModal\"]/div/div/div[3]/button[2]")).click();
         Thread.sleep(1000);
