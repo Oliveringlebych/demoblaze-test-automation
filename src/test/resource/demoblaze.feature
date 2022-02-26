@@ -3,7 +3,7 @@ Feature: Demo feature
   Scenario: Sign into demoblaze and buy an item
     Given I have accessed the demoblaze website
     When I have logged in
-    And I add an item to the basket
+    And I add an item to the basket to buy
     Then I can pay for that item
 
   Scenario: Sign into demoblaze and add an item to cart and then delete it
