@@ -77,5 +77,22 @@ public class DemoblazeDefinitions {
 
     }
 
+    @Then("^I can use the contact us link to send a message")
+    public void send_message() throws Exception {
+        driver.findElement(By.xpath("//*[@id=\"navbarExample\"]/ul/li[2]/a")).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//*[@id=\"recipient-email\"]")).sendKeys("oingleby123@email.co.uk");
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//*[@id=\"recipient-name\"]")).sendKeys("Oliver Ingleby");
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//*[@id=\"message-text\"]")).sendKeys("Hello World");
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//*[@id=\"exampleModal\"]/div/div/div[3]/button[2]")).click();
+        Thread.sleep(1000);
+        driver.switchTo().alert().accept();
+        Thread.sleep(500);
+        driver.quit();
+    }
+
 
 }
