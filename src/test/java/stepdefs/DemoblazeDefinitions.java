@@ -37,7 +37,7 @@ public class DemoblazeDefinitions {
     }
 
     @And("^I add an item to the basket$")
-    public void i_run_it_within_my_IDE() throws Exception {
+    public void add_item_to_basket() throws Exception {
         driver.findElement(By.xpath("//*[@id=\"tbodyid\"]/div[1]/div/a/img")).click();
         Thread.sleep(500);
         driver.findElement(By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a")).click();
@@ -47,7 +47,7 @@ public class DemoblazeDefinitions {
     }
 
     @Then("^I can pay for that item$")
-    public void i_will_be_able_to_run_connected_step_definitions() throws Exception {
+    public void pay_for_item() throws Exception {
         driver.findElement(By.xpath("//*[@id=\"cartur\"]")).click();
         Thread.sleep(500);
         driver.findElement(By.xpath("//*[@id=\"page-wrapper\"]/div/div[2]/button")).click();
@@ -67,5 +67,15 @@ public class DemoblazeDefinitions {
         driver.findElement(By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[2]")).click();
         Thread.sleep(500);
         driver.findElement(By.xpath("/html/body/div[10]/div[7]/div/button")).click();
+        driver.quit();
     }
+
+    @Then("^I delete that item from the basket$")
+    public void delete_item() throws Exception {
+        driver.findElement(By.xpath(" /html/body/div[6]/div/div[1]/div/table/tbody/tr/td[4]/a")).click();
+        driver.quit();
+
+    }
+
+
 }
