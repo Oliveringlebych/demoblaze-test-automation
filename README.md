@@ -11,4 +11,5 @@ mvn test
 The test report can be viewed by running the following commands.
 
 cd target/surefire-report
+
 open emailable-report.html
