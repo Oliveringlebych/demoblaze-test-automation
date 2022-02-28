@@ -1,4 +1,4 @@
-Demoblaze Auotmation
+Demoblaze Automation
 
 This test suite should be run in Java 8.
 
